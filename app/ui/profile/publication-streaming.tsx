@@ -9,8 +9,8 @@ export default function PublicationStreaming() {
   return (
     <div className="flex">
       <div
-        className={clsx('py-3 pl-5 basis-1/2', {
-          'border-wblue cursor-pointer text-wblue border-b-2 transition': isPublication,
+        className={clsx('py-3 pl-5 basis-1/2 cursor-pointer', {
+          'border-wblue  text-wblue border-b-2 transition': isPublication,
           'border-gray-400 text-wsecond border-b': !isPublication,
         })}
         onClick={() => setIsPublication(true)}
@@ -19,7 +19,7 @@ export default function PublicationStreaming() {
       </div>
       <div
         className={clsx('py-3 pl-5 basis-1/2 cursor-pointer', {
-          'border-wblue cursor-pointer text-wblue border-b-2 transition': !isPublication,
+          'border-wblue text-wblue border-b-2 transition': !isPublication,
           'border-gray-400 text-wsecond border-b': isPublication,
         })}
         onClick={() => setIsPublication(false)}

@@ -1,3 +1,4 @@
+import Navigator from '../ui/navigator'
 import Bio from '../ui/profile/bio'
 import EditContainer from '../ui/profile/edit-container'
 import LogoAndName from '../ui/profile/logo-and-name'
@@ -19,6 +20,8 @@ export default function Page() {
         <PublicationStreaming />
         <Posts />
       </div>
+
+    <Navigator />
     </div>
   )
 }

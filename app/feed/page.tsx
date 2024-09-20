@@ -1,18 +1,19 @@
-import { RiCopperCoinLine } from "react-icons/ri";
-import { MdMailOutline } from "react-icons/md";
-import Navigator from "../ui/navigator";
+import Navigator from '../ui/navigator'
+import ToplineBar from '../ui/feed/topline-bar'
+import StoryBox from '../ui/feed/story-box'
+import PostBox from '../ui/feed/post-box'
 
 
 export default function Page() {
   return (
-    <div>
-      <div className='px-2 pt-5'>
-
-        
-        
+    <div className='text-wbase pb-24'>
+      <div className="px-5 pt-5">
+        <ToplineBar />
+        <StoryBox />
       </div>
-      
-    <Navigator />
+      <PostBox />
+
+      <Navigator />
     </div>
   )
 }

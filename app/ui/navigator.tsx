@@ -6,7 +6,7 @@ import { GoBell } from 'react-icons/go'
 
 export default function Navigator() {
   return (
-    <div className="flex justify-center fixed bottom-0 left-0 w-full ">
+    <div className="flex justify-center fixed bottom-0 left-0 w-full xl:hidden ">
       <div className=" flex text-wsecond justify-center items-center gap-10 text-2xl pb-3 pt-1 w-full max-w-[415px] h-16 rounded-t-2xl bg-[#1F1F2F]">
         <RiHomeLine className="cursor-pointer hover:text-wbgbase transition" />
         <IoSearchOutline className="cursor-pointer hover:text-wbgbase transition" />

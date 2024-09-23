@@ -43,7 +43,7 @@ export default function SignupForm() {
       </div>
 
       <div>
-        <button className="block w-full bg-[#E65B0C] hover:bg-[#b7571f] text-white rounded-2xl py-4">
+        <button className="block w-full bg-[#0c72e6] hover:bg-[#1f75b7] text-white rounded-2xl py-4">
           Sign up
         </button>
       </div>

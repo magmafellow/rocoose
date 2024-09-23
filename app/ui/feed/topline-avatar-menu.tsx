@@ -2,7 +2,7 @@
 import gsap from 'gsap'
 import { useState } from 'react'
 
-export default function AvatarMenu() {
+export default function AvatarMenu({user}: {user: any}) {
   const onClickHandler = (e: any) => {
     document.documentElement.style.overflow = 'hidden'
     const tl = gsap.timeline()
@@ -17,7 +17,7 @@ export default function AvatarMenu() {
     >
       <img
         className="w-full h-full object-cover"
-        src="/avatar.jpg"
+        src={`/${user.profilePicture}`}
         alt="avatar"
       />
     </div>

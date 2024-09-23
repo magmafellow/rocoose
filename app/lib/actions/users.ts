@@ -18,6 +18,17 @@ export async function deleteUsers() {
   await db.delete(usersTable)
 }
 
+export async function getUserById(id: string) {
+  const res = await db.select().from(usersTable).where(eq(usersTable.id, id))
+  if (res.length === 0) {
+    return null
+  } else if (res.length === 1) {
+    return res[0]
+  } else {
+    throw new Error('Error! Multiple users got by ONE id')
+  }
+}
+
 export async function registerGithubUser(user: InsertUser) {
   unstable_noStore()
   await db.insert(usersTable).values(user)

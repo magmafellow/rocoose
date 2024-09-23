@@ -1,10 +1,17 @@
-import Link from "next/link";
+'use client'
+
+import { loginCredentials } from '@/app/lib/actions/authenticate'
+import Link from 'next/link'
+import { useFormState } from 'react-dom'
 
 export default function LoginForm() {
+  loginCredentials
+  const [message, dispatch] = useFormState(loginCredentials, undefined)
+
   return (
     <form
       className="flex flex-grow pb-10 h-full flex-col gap-4 w-3/4 justify-center mx-auto"
-      action=""
+      action={dispatch}
     >
       <div>
         <label className="text-sm text-stone-500" htmlFor="number">
@@ -15,6 +22,7 @@ export default function LoginForm() {
           type="text"
           id="number"
           name="number"
+          disabled
         />
       </div>
 
@@ -30,7 +38,7 @@ export default function LoginForm() {
         />
       </div>
 
-      <div className="flex-grow">
+      <div className="flex-grow mb-3">
         <label className="text-sm text-stone-500" htmlFor="password">
           password
         </label>
@@ -42,8 +50,15 @@ export default function LoginForm() {
         />
       </div>
 
+      <div className='mb-3'>
+        {message?.error && <p className="text-red-800 text-center">{message.error}</p>}
+      </div>
+      <div className='mb-3'>
+        {message?.success && <p className="text-green-800 text-center">{message.success}</p>}
+      </div>
+
       <div>
-        <button className="block w-full bg-[#E65B0C] hover:bg-[#b7571f] text-white rounded-2xl py-4">
+        <button className="block w-full bg-[#0c72e6] hover:bg-[#1f75b7] text-white rounded-2xl py-4">
           Sign in
         </button>
       </div>

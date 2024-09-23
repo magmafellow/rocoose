@@ -1,21 +1,30 @@
-import Chats from "../ui/messages/chats";
-import Search from "../ui/messages/search";
-import Topline from "../ui/messages/topline";
-import Navigator from "../ui/navigator";
+import { auth } from '@/auth'
+import { getUserById } from '../lib/actions/users'
+import DefaultGrid from '../ui/default-grid'
+import Chats from '../ui/messages/chats'
+import Search from '../ui/messages/search'
+import Topline from '../ui/messages/topline'
+import Navigator from '../ui/navigator'
+import Sidebar from '../ui/sidebar'
 
-export default function Page() {
+export default async function Page() {
+  const session = await auth()
+  const user = await getUserById(session!.user!.id!)
+
   return (
-    <div className="min-h-screen text-wbase pb-24">
-      <div className='sm:max-w-[640px] mx-auto'>
-        <div className="pt-5 px-4">
-          <Topline />
-          <Search />
-          <Chats />
-
+    <DefaultGrid>
+      <Sidebar user={user} />
+      <div className="min-h-screen text-wbase pb-24">
+        <div className="sm:max-w-[640px] mx-auto">
+          <div className="pt-5 px-4">
+            <Topline />
+            <Search />
+            <Chats />
+          </div>
         </div>
-      </div>
 
-      <Navigator />
-    </div>
+        <Navigator />
+      </div>
+    </DefaultGrid>
   )
 }

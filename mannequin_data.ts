@@ -5,12 +5,18 @@ export const users: InsertUser[] = [
     id: '1',
     email: 'email@1.ru',
     password: 'admin1',
+    firstName: 'Alex',
+    lastName: 'Romanov',
+    profilePicture: 'profile-01.png',
     username: 'martin',
   },
   {
     id: '2',
     email: 'email@2.ru',
     password: 'admin2',
+    firstName: 'David',
+    lastName: 'Philippoff',
+    profilePicture: 'profile-02.jpg',
     username: 'volga',
   },
 ]

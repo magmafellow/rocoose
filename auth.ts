@@ -54,15 +54,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const userDB = await getUserByEmail(user.email as string)
         token.id = userDB?.id
         token.name = userDB?.username
-        console.log(account)
-        console.log(profile)
-        console.log(token)
+        token.profilePicture = userDB?.profilePicture
       }
       return token
     },
     async session({ session, token }) {
       session.user.id = token.id as string
       session.user.name = token.name
+      session.user.image = token.profilePicture as string
       return session
     },
   },

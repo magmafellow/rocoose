@@ -9,6 +9,7 @@ import Statistics from '../ui/profile/statistics'
 import { getUserById } from '../lib/actions/users'
 import DefaultGrid from '../ui/default-grid'
 import Sidebar from '../ui/sidebar'
+import SidebarRight from '../ui/sidebar-right'
 
 export default async function Page() {
   const session = await auth()
@@ -31,6 +32,7 @@ export default async function Page() {
 
         <Navigator />
       </div>
+      <SidebarRight />
     </DefaultGrid>
   )
 }

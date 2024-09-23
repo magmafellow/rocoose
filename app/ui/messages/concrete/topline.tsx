@@ -3,7 +3,7 @@ import { MdKeyboardArrowLeft } from 'react-icons/md'
 
 export default function Topline() {
   return (
-    <div className="flex justify-between px-2 py-1.5 pb-2 cursor-pointer transition">
+    <div className="flex justify-between px-2 py-1.5 pb-2 transition">
       <div className="flex justify-center items-center mr-3">
         <div className="rounded-full hover:bg-gray-200 p-1.5">
           <MdKeyboardArrowLeft className="text-3xl" />

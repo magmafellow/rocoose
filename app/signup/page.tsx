@@ -5,7 +5,7 @@ import SignupForm from '../ui/login/signup-form'
 export default function Page() {
   return (
     <div className="min-h-screen bg-[#F2F7F9]">
-      <div className="pt-4 flex flex-col text-wbase min-h-screen">
+      <div className="pt-4 flex flex-col text-wbase min-h-screen mx-auto sm:max-w-[640px]">
         <div className="flex justify-center items-center mb-6">
           <div className="h-10 w-10 rounded-full bg-amber-800"></div>
         </div>

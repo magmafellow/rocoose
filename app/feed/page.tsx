@@ -5,7 +5,7 @@ import PostBox from '../ui/feed/post-box'
 
 export default function Page() {
   return (
-    <div className="text-wbase pb-24">
+    <div className="text-wbase pb-24 mx-auto sm:max-w-[640px]">
       <div className="px-5 pt-5">
         <ToplineBar />
         <StoryBox />

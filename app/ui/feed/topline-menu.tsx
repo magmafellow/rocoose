@@ -13,7 +13,7 @@ import ToplineMenuClose from './topline-menu-close'
 
 export default function ToplineMenu() {
   return (
-    <div className="topline-menu-wrapper bg-black hidden bg-opacity-15 fixed w-screen h-screen top-0 left-0 z-10">
+    <div className="topline-menu-wrapper fixed w-screen h-screen top-0 left-0 z-10">
       <div className="topline-menu h-screen flex flex-col w-full fixed -left-[100%] top-0 bg-white pt-24 pl-6">
         <div className="flex gap-5 mb-10">
           <div className="w-16 h-16 overflow-hidden rounded-full">

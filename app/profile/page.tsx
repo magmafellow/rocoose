@@ -9,7 +9,7 @@ import Statistics from '../ui/profile/statistics'
 export default function Page() {
   return (
     <div>
-      <div>
+      <div className='mx-auto sm:max-w-[640px]'>
 
         <div className="px-5 py-5">
           <EditContainer />

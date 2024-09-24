@@ -5,11 +5,12 @@ import { AiOutlineShopping } from 'react-icons/ai'
 import { TfiCup } from 'react-icons/tfi'
 import { FaRegCreditCard } from 'react-icons/fa6'
 import { RiCopperCoinLine } from 'react-icons/ri'
-import { BiMessageSquare } from "react-icons/bi";
+import { BiMessageSquare } from 'react-icons/bi'
 import Link from 'next/link'
 import Signout from './signout'
+import ThemeSwitcher from './theme-switcher'
 
-export default function Sidebar({user}: {user: any}) {
+export default function Sidebar({ user }: { user: any }) {
   return (
     <div className="h-screen hidden xl:flex flex-col pt-24 pl-6">
       <div className="flex gap-5 mb-10">
@@ -39,7 +40,7 @@ export default function Sidebar({user}: {user: any}) {
           </div>
           <div className="font-semibold text-xl">My Perfil</div>
         </Link>
-        <Link href='/messages' className="flex group gap-4 items-center">
+        <Link href="/messages" className="flex group gap-4 items-center">
           <div>
             <BiMessageSquare className="text-3xl text-wsecond group-hover:text-blue-400" />
           </div>
@@ -69,8 +70,10 @@ export default function Sidebar({user}: {user: any}) {
           </div>
           <div className="font-semibold text-xl">Monedas</div>
         </div>
+        <div className="">
+          <ThemeSwitcher />
+        </div>
       </div>
-
     </div>
   )
 }

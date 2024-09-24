@@ -44,7 +44,7 @@ export default function LoginForm() {
         </label>
         <input
           className="block w-full rounded-xl py-3 px-2 focus:outline-none focus:border-none"
-          type="text"
+          type="password"
           id="password"
           name="password"
         />

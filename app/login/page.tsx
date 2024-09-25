@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import LoginForm from '../ui/login/login-form'
+import ThemeSwitcher from '../ui/theme-switcher'
 
 export default function Page() {
   return (
@@ -13,6 +13,10 @@ export default function Page() {
         </div>
 
         <LoginForm />
+      </div>
+
+      <div className='absolute top-4 left-4'>
+        <ThemeSwitcher />
       </div>
     </div>
   )

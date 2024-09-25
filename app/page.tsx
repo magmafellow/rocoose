@@ -1,10 +1,14 @@
 'use client'
 
-import { permanentRedirect, redirect, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { useEffect } from 'react'
 
 export default function Page() {
-  redirect('/feed')
+  const router = useRouter()
+  useEffect(() => {
+    router.push('/feed')
+  })
+
   return (
     <div>redirected</div>
   )

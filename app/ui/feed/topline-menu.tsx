@@ -13,11 +13,12 @@ import { BiMessageSquare } from 'react-icons/bi'
 import ToplineMenuClose from './topline-menu-close'
 import Signout from '../signout'
 import Link from 'next/link'
+import ThemeSwitcher from '../theme-switcher'
 
 export default function ToplineMenu({ user }: { user: any }) {
   return (
-    <div className="topline-menu-wrapper fixed w-screen h-screen top-0 -left-[100%] z-10">
-      <div className="topline-menu h-screen flex flex-col w-full fixed -left-[100%] top-0 bg-wbgbase dark:bg-dbgbase text-wbase dark:text-dbase pt-24 pl-6">
+    <div className="topline-menu-wrapper fixed w-screen h-screen top-0 -left-[105%] z-10">
+      <div className="topline-menu h-screen flex overflow-y-auto flex-col w-screen bg-wbgbase dark:bg-dbgbase text-wbase dark:text-dbase pt-24 pl-6">
         <div className="flex gap-5 mb-10">
           <div className="w-16 h-16 overflow-hidden rounded-full">
             <img src={`/${user.profilePicture}`} alt="avatar" />
@@ -29,7 +30,7 @@ export default function ToplineMenu({ user }: { user: any }) {
             <p className="text-wsecond dark:text-dsecond">@{user.username}</p>
           </div>
         </div>
-        <div className="flex-grow flex flex-col gap-8">
+        <div className="flex-grow flex flex-col gap-8 mb-8">
           <Link href="/" className="inline-flex group gap-4 items-center">
             <div>
               <RiHomeLine className="text-3xl text-wsecond dark:text-dsecond group-hover:text-wblue group-hover:dark:text-dblue" />
@@ -81,6 +82,9 @@ export default function ToplineMenu({ user }: { user: any }) {
             </div>
             <div className="font-semibold text-xl">Monedas</div>
           </div>
+          <div className="">
+            <ThemeSwitcher />
+          </div>
         </div>
         {user && (
           <div className="absolute right-4 bottom-8">
@@ -89,7 +93,7 @@ export default function ToplineMenu({ user }: { user: any }) {
         )}
 
         <div className="pb-10">
-          <div className="mb-8 text-lg font-medium">Configuracion</div>
+          <div className="mb-4 text-lg font-medium">Configuracion</div>
           <div className="text-lg font-medium">Centro de ayuda</div>
         </div>
 

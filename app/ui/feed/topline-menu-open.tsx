@@ -4,10 +4,10 @@ import { useState } from 'react'
 
 export default function AvatarMenu({user}: {user: any}) {
   const onClickHandler = (e: any) => {
-    document.documentElement.style.overflow = 'hidden'
+    // document.documentElement.style.overflow = 'hidden'
     const tl = gsap.timeline()
-    tl.to('.topline-menu-wrapper', { display: 'block', duration: 0.01 })
-    tl.to('.topline-menu', { left: '0%' })
+    tl.to('.topline-menu-wrapper', { left: '0%' })
+    // tl.to('.topline-menu', { left: '0%' })
   }
 
   return (

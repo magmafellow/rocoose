@@ -7,8 +7,8 @@ export default function ToplineMenuClose() {
   const onClickHandler = () => {
     document.documentElement.style.overflow = 'auto'
     const tl = gsap.timeline()
-    tl.to('.topline-menu', { left: '-100%' })
-    tl.to('.topline-menu-wrapper', { display: 'none' })
+    // tl.to('.topline-menu', { left: '-100%' })
+    tl.to('.topline-menu-wrapper', { left: '-105%' })
   }
 
   return (

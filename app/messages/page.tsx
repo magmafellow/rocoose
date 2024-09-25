@@ -6,6 +6,7 @@ import Search from '../ui/messages/search'
 import Topline from '../ui/messages/topline'
 import Navigator from '../ui/navigator'
 import Sidebar from '../ui/sidebar'
+import SidebarRight from '../ui/sidebar-right'
 
 export default async function Page() {
   const session = await auth()
@@ -25,6 +26,7 @@ export default async function Page() {
 
         <Navigator />
       </div>
+      <SidebarRight />
     </DefaultGrid>
   )
 }

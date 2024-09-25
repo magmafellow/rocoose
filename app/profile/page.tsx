@@ -32,7 +32,7 @@ export default async function Page() {
 
         <Navigator />
       </div>
-      <SidebarRight />
+      {/* <SidebarRight /> */}
     </DefaultGrid>
   )
 }

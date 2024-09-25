@@ -1,12 +1,13 @@
 import { RxDotsHorizontal } from 'react-icons/rx'
 import { MdKeyboardArrowLeft } from 'react-icons/md'
+import Link from 'next/link'
 
 export default function Topline() {
   return (
     <div className="flex justify-between px-2 py-1.5 pb-2 transition">
       <div className="flex justify-center items-center mr-3">
         <div className="rounded-full hover:bg-gray-200 hover:dark:bg-gray-700 p-1.5">
-          <MdKeyboardArrowLeft className="text-3xl" />
+          <Link href='/messages'><MdKeyboardArrowLeft className="text-3xl" /></Link>
         </div>
       </div>
       <div className="mr-3">

@@ -10,6 +10,7 @@ import { getUserById } from '@/app/lib/actions/users'
 import EditContainerWithout from '@/app/ui/profile/edit-containter-without'
 import DefaultGrid from '@/app/ui/default-grid'
 import Sidebar from '@/app/ui/sidebar'
+import SidebarRight from '@/app/ui/sidebar-right'
 
 export default async function Page({ params }: { params: { id: string } }) {
   const session = await auth()
@@ -33,6 +34,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
         <Navigator />
       </div>
+      {/* <SidebarRight /> */}
     </DefaultGrid>
   )
 }

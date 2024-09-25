@@ -2,11 +2,19 @@
 
 import { loginCredentials } from '@/app/lib/actions/authenticate'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 import { useFormState } from 'react-dom'
 
 export default function LoginForm() {
-  loginCredentials
   const [message, dispatch] = useFormState(loginCredentials, undefined)
+  const router = useRouter()
+
+  useEffect(() => {
+    if (message?.success) {
+      router.push('/')
+    }
+  })
 
   return (
     <form
@@ -50,11 +58,19 @@ export default function LoginForm() {
         />
       </div>
 
-      <div className='mb-3'>
-        {message?.error && <p className="text-red-800 text-center">{message.error}</p>}
+      <div className="mb-3">
+        {message?.error && (
+          <p className="text-red-800 dark:text-red-500 text-center">
+            {message.error}
+          </p>
+        )}
       </div>
-      <div className='mb-3'>
-        {message?.success && <p className="text-green-800 text-center">{message.success}</p>}
+      <div className="mb-3">
+        {message?.success && (
+          <p className="text-green-800 dark:text-green-500 text-center">
+            {message.success}
+          </p>
+        )}
       </div>
 
       <div>

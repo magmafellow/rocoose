@@ -14,7 +14,7 @@ export default async function Page() {
   return (
     <DefaultGrid>
       <Sidebar user={user} />
-      <div className="min-h-screen text-wbase pb-24">
+      <div className="min-h-screen text-wbase dark:text-dbase pb-24">
         <div className="sm:max-w-[640px] mx-auto">
           <div className="pt-5 px-4">
             <Topline />

@@ -8,7 +8,7 @@ export default function PostAddComment({ data, n }: { data: any, n: number }) {
           alt="avatar"
         />
       </div>
-      <div className="text-stone-400">Add comment...</div>
+      <div className="text-stone-400 dark:text-stone-300">Add comment...</div>
     </div>
   )
 }

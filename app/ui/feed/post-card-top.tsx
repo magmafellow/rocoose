@@ -13,7 +13,7 @@ export default function PostCardTop({ n, data }: { n: number; data: any }) {
         </div>
         <div>
           <h3 className="font-bold text-lg">{data[n].name}</h3>
-          <p className="text-wsecond">{data[n].at}</p>
+          <p className="text-wsecond dark:text-dsecond">{data[n].at}</p>
         </div>
       </div>
       <div>

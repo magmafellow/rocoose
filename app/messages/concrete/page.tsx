@@ -13,7 +13,7 @@ export default async function Page() {
   return (
     <DefaultGrid>
       <Sidebar user={user} />
-      <div className="min-h-dvh text-wbase">
+      <div className="min-h-dvh text-wbase dark:text-dbase">
         <div className="pt-4 min-h-screen flex flex-col mx-auto sm:max-w-[640px]">
           <Topline />
           <Chat />

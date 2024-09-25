@@ -11,7 +11,7 @@ export default function LogoAndName({ user }: { user: any }) {
       </div>
       <div>
         <h3 className="font-bold text-lg">{user.firstName}</h3>
-        <div className="text-wsecond">@princon</div>
+        <div className="text-wsecond dark:text-dsecond">@princon</div>
       </div>
     </div>
   )

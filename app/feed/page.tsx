@@ -15,7 +15,7 @@ export default async function Page() {
     <DefaultGrid>
       <Sidebar user={user} />
 
-      <div className="text-wbase pb-24 mx-auto sm:max-w-[640px]">
+      <div className="text-wbase dark:text-dbase pb-24 mx-auto sm:max-w-[640px]">
         <div className="px-5 pt-5">
           <ToplineBar user={user} />
           <StoryBox />

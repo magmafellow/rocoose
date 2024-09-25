@@ -1,10 +1,10 @@
-import { SlMagnifier } from "react-icons/sl";
+import { SlMagnifier } from 'react-icons/sl'
 
 export default function Search() {
   return (
     <div className="relative mb-5">
       <input
-        className="bg-[#F7F7FC] border border-gray-300 w-full block py-2.5 pl-9 pr-2 rounded placeholder:text-wsecond"
+        className="bg-wbgbase focus:outline outline-gray-400 dark:outline-gray-700 dark:bg-dbgbase border border-gray-300 dark:border-gray-600 w-full block py-2.5 pl-9 pr-2 rounded placeholder:text-wsecond placeholder:dark:text-dsecond transition"
         type="text"
         placeholder="Search"
       />

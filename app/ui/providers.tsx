@@ -14,5 +14,5 @@ export default function Providers({ children }: { children: any }) {
     return <>{children}</>
   }
 
-  return <ThemeProvider>{children}</ThemeProvider>
+  return <ThemeProvider attribute="class">{children}</ThemeProvider>
 }

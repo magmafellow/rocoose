@@ -27,7 +27,7 @@ export default function Sidebar({ user }: { user: any }) {
       <div className="flex-grow flex flex-col gap-8">
         <Link href="/" className="inline-flex group gap-4 items-center">
           <div>
-            <RiHomeLine className="text-3xl text-wsecond group-hover:text-blue-400" />
+            <RiHomeLine className="text-3xl text-wsecond dark:text-dsecond group-hover:text-blue-400 transition" />
           </div>
           <div className="font-semibold text-xl">Home</div>
         </Link>
@@ -36,37 +36,37 @@ export default function Sidebar({ user }: { user: any }) {
           className="inline-flex group gap-4 items-center"
         >
           <div>
-            <CgProfile className="text-3xl text-wsecond group-hover:text-blue-400 transition" />
+            <CgProfile className="text-3xl text-wsecond dark:text-dsecond group-hover:text-blue-400 transition" />
           </div>
           <div className="font-semibold text-xl">My Perfil</div>
         </Link>
         <Link href="/messages" className="flex group gap-4 items-center">
           <div>
-            <BiMessageSquare className="text-3xl text-wsecond group-hover:text-blue-400" />
+            <BiMessageSquare className="text-3xl text-wsecond dark:text-dsecond group-hover:text-blue-400 transition" />
           </div>
           <div className="font-semibold text-xl">Messages</div>
         </Link>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 group items-center">
           <div>
-            <FaRegBookmark className="text-3xl text-wsecond" />
+            <FaRegBookmark className="text-3xl text-wsecond dark:text-dsecond group-hover:text-blue-400 transition" />
           </div>
           <div className="font-semibold text-xl">Guardado</div>
         </div>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 group items-center">
           <div>
-            <TfiCup className="text-3xl text-wsecond" />
+            <TfiCup className="text-3xl text-wsecond dark:text-dsecond group-hover:text-blue-400 transition" />
           </div>
           <div className="font-semibold text-xl">Ventas</div>
         </div>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 group items-center">
           <div>
-            <FaRegCreditCard className="text-3xl text-wsecond" />
+            <FaRegCreditCard className="text-3xl text-wsecond dark:text-dsecond group-hover:text-blue-400 transition" />
           </div>
           <div className="font-semibold text-xl">Agregar tarjeta</div>
         </div>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 group items-center">
           <div>
-            <RiCopperCoinLine className="text-3xl text-wsecond" />
+            <RiCopperCoinLine className="text-3xl text-wsecond dark:text-dsecond group-hover:text-blue-400 transition" />
           </div>
           <div className="font-semibold text-xl">Monedas</div>
         </div>

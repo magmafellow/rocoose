@@ -10,13 +10,13 @@ export default function PostCardLikeSection() {
           <div>
             <AiOutlineLike className="text-2xl" />
           </div>
-          <div className="text-wsecond">100</div>
+          <div className="text-wsecond dark:text-dsecond">100</div>
         </div>
         <div className="flex gap-1.5">
           <div>
             <FaRegComment className="text-2xl" />
           </div>
-          <div className="text-wsecond">120</div>
+          <div className="text-wsecond dark:text-dsecond">120</div>
         </div>
       </div>
       <div>

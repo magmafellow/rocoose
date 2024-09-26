@@ -21,7 +21,7 @@ export default function Sidebar({ user }: { user: any }) {
           <h3 className="font-bold text-2xl">
             {user.firstName} {user.lastName}
           </h3>
-          <p className="text-wsecond">@{user.username}</p>
+          <p className="text-wsecond dark:text-dsecond">@{user.username}</p>
         </div>
       </div>
       <div className="flex-grow flex flex-col gap-8">

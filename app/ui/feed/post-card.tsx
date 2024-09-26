@@ -16,6 +16,7 @@ export default function PostCard({
   }
 }) {
   const cummulativeObj = {
+    userId: postWithUser.users_table?.id!,
     profilePicture: postWithUser.users_table?.profilePicture!,
     firstName: postWithUser.users_table?.firstName!,
     lastName: postWithUser.users_table?.lastName!,

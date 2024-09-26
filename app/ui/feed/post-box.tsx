@@ -6,7 +6,7 @@ export default async function PostBox() {
 
   return (
     <div>
-      {postsWithUsers.map((postWithUser, i) => <PostCard postWithUser={postWithUser} />)}
+      {postsWithUsers.map((postWithUser, i) => <PostCard key={i} postWithUser={postWithUser} />)}
     </div>
   )
 }

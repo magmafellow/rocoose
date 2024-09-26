@@ -12,7 +12,7 @@ export default function Notifications({ user }: { user: any }) {
         </h3>
         <div>
           {/* notification card */}
-          <div className="flex items-center border-b border-gray-300 dark:border-gray-600 hover:bg-slate-200 hover:dark:bg-slate-800 gap-4 px-2 lg:px-6 py-2">
+          <div className="flex items-center xl:justify-center border-b border-gray-300 dark:border-gray-600 hover:bg-slate-200 hover:dark:bg-slate-800 gap-4 px-2 lg:px-6 py-2">
             <div className="w-16 h-16 rounded-full relative">
               <img
                 src={`/${user.profilePicture}`}
@@ -38,7 +38,7 @@ export default function Notifications({ user }: { user: any }) {
             </div>
           </div>
           {/* notification card */}
-          <div className="flex items-center border-b border-gray-300 dark:border-gray-600 hover:bg-slate-200 hover:dark:bg-slate-800 gap-4 px-2 lg:px-6 py-2">
+          <div className="flex items-center xl:justify-center border-b border-gray-300 dark:border-gray-600 hover:bg-slate-200 hover:dark:bg-slate-800 gap-4 px-2 lg:px-6 py-2">
             <div className="w-16 h-16 rounded-full relative">
               <img
                 src={`/${user.profilePicture}`}

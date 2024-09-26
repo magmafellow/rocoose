@@ -2,6 +2,10 @@ import Link from 'next/link'
 import LoginForm from '../ui/login/login-form'
 import SignupForm from '../ui/login/signup-form'
 
+export const metadata = {
+  title: 'Signup | Rocoose'
+}
+
 export default function Page() {
   return (
     <div className="min-h-screen bg-[#F2F7F9]">

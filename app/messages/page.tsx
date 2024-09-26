@@ -8,6 +8,10 @@ import Navigator from '../ui/navigator'
 import Sidebar from '../ui/sidebar'
 import SidebarRight from '../ui/sidebar-right'
 
+export const metadata = {
+  title: 'Messages | Rocoose'
+}
+
 export default async function Page() {
   const session = await auth()
   const user = await getUserById(session!.user!.id!)

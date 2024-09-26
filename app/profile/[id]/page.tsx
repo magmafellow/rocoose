@@ -12,6 +12,13 @@ import DefaultGrid from '@/app/ui/default-grid'
 import Sidebar from '@/app/ui/sidebar'
 import SidebarRight from '@/app/ui/sidebar-right'
 
+export async function generateMetadata({ params }: { params: any }) {
+  const user = await getUserById(params.id)
+  return {
+    title: `Profile of ${user?.firstName} ${user?.lastName} | Rocoose`
+  }
+}
+
 export default async function Page({ params }: { params: { id: string } }) {
   const session = await auth()
   const user = await getUserById(session!.user!.id!)

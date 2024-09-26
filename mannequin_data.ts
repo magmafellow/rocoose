@@ -1,4 +1,4 @@
-import { InsertPost, InsertUser } from './schema'
+import { InsertLike, InsertPost, InsertUser } from './schema'
 
 export const users: InsertUser[] = [
   {
@@ -42,7 +42,23 @@ export const posts: InsertPost[] = [
   },
 ]
 
-
+export const likes: InsertLike[] = [
+  {
+    id: '700',
+    likerId: '1',
+    receiverPostId: '502',
+  },
+  {
+    id: '702',
+    likerId: '2',
+    receiverPostId: '502',
+  },
+  {
+    id: '701',
+    likerId: '2',
+    receiverPostId: '501',
+  },
+]
 
 // export const posts: InsertPost[] = [
 //   {

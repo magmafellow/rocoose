@@ -16,6 +16,7 @@ export async function createUsers() {
 export async function deleteUsers() {
   unstable_noStore()
   await db.delete(usersTable)
+  console.log('Users have been deleted')
 }
 
 export async function getUserById(id: string) {

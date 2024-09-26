@@ -38,9 +38,6 @@ export const likesTable = pgTable('likes_table', {
   likerId: text('liker_id')
     .notNull()
     .references(() => usersTable.id, { onDelete: 'set null' }),
-  receiverUserId: text('receiver_user_id')
-    .notNull()
-    .references(() => usersTable.id, { onDelete: 'set null' }),
   receiverPostId: text('receiver_post_id')
     .notNull()
     .references(() => postsTable.id, { onDelete: 'set null' }),

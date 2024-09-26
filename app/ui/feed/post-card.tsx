@@ -23,13 +23,14 @@ export default function PostCard({
     username: postWithUser.users_table?.username!,
     imageFile: postWithUser.posts_table?.imageFile!,
     textContent: postWithUser.posts_table?.textContent!,
+    postId: postWithUser.posts_table?.id!,
   }
 
   return (
     <div className="mb-8">
       <PostCardTop {...cummulativeObj} />
       <PostContent imageFile={cummulativeObj.imageFile} />
-      <PostCardLikeSection />
+      <PostCardLikeSection postId={cummulativeObj.postId} />
       <PostCardOpinion {...cummulativeObj} />
       <PostAddComment profilePicture={cummulativeObj.profilePicture} />
       <PostTime />

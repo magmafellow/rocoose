@@ -1,10 +1,10 @@
-export default function PostContent({ data, n }: { data: any, n: number }) {
+export default function PostContent({ imageFile }: { imageFile: string }) {
   return (
     <div className="h-[400px]">
         <img
           className="w-full h-full object-cover"
-          src={data[n].content}
-          alt="forest"
+          src={`/${imageFile}`}
+          alt="post picture"
         />
       </div>
   )

@@ -7,6 +7,7 @@ import { getUserById } from '../lib/actions/users'
 import DefaultGrid from '../ui/default-grid'
 import Sidebar from '../ui/sidebar'
 import SidebarRight from '../ui/sidebar-right'
+import { getRandomLastPostsWithOwners } from '../lib/actions/posts'
 
 export const metadata = {
   title: 'Feed | Rocoose'
@@ -15,7 +16,7 @@ export const metadata = {
 export default async function Page() {
   const session = await auth()
   const user = await getUserById(session!.user!.id!)
-
+  
   return (
     <DefaultGrid>
       <Sidebar user={user} />

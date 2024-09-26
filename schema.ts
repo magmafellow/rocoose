@@ -11,6 +11,68 @@ export const usersTable = pgTable('users_table', {
   phoneNumber: text('phone_number').unique(),
 })
 
+export const postsTable = pgTable('posts_table', {
+  id: text('id').primaryKey(),
+  imageFile: text('image_file'),
+  textContent: text('text_content'),
+  ownerId: text('owner_id')
+    .notNull()
+    .references(() => usersTable.id, { onDelete: 'set null' }),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+})
+
+export const messagesTable = pgTable('messages_table', {
+  id: text('id').primaryKey(),
+  textContent: text('text_content').notNull(),
+  ownerId: text('owner_id')
+    .notNull()
+    .references(() => usersTable.id, { onDelete: 'set null' }),
+  receiverId: text('receive_id')
+    .notNull()
+    .references(() => usersTable.id, { onDelete: 'set null' }),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+})
+
+export const likesTable = pgTable('likes_table', {
+  id: text('id').primaryKey(),
+  likerId: text('liker_id')
+    .notNull()
+    .references(() => usersTable.id, { onDelete: 'set null' }),
+  receiverUserId: text('receiver_user_id')
+    .notNull()
+    .references(() => usersTable.id, { onDelete: 'set null' }),
+  receiverPostId: text('receiver_post_id')
+    .notNull()
+    .references(() => postsTable.id, { onDelete: 'set null' }),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+})
+
+export const commentsTable = pgTable('comments_table', {
+  id: text('id').primaryKey(),
+  textContent: text('text_content').notNull(),
+  ownerId: text('owner_id')
+    .notNull()
+    .references(() => usersTable.id, { onDelete: 'set null' }),
+  receiverId: text('receiver_id').references(() => usersTable.id, {
+    onDelete: 'set null',
+  }),
+  postId: text('post_id')
+    .notNull()
+    .references(() => postsTable.id, { onDelete: 'set null' }),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+})
+
+export const notificationsTable = pgTable('notifications_table', {
+  id: text('id').primaryKey(),
+  ownerId: text('owner_id').notNull(),
+  type: text('type').notNull(), // comment / like
+  receiverId: text('receiver_id').notNull(),
+  postId: text('post_id')
+    .notNull()
+    .references(() => postsTable.id, { onDelete: 'set null' }),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+})
+
 // export const postsTable = pgTable('posts_table', {
 //   id: text('id').primaryKey(),
 //   title: text('title').notNull(),
@@ -38,6 +100,21 @@ export const usersTable = pgTable('users_table', {
 
 export type InsertUser = typeof usersTable.$inferInsert
 export type SelectUser = typeof usersTable.$inferSelect
+
+export type InsertPost = typeof postsTable.$inferInsert
+export type SelectPost = typeof postsTable.$inferSelect
+
+export type InsertMessage = typeof messagesTable.$inferInsert
+export type SelectMessage = typeof messagesTable.$inferSelect
+
+export type InsertLike = typeof likesTable.$inferInsert
+export type SelectLike = typeof likesTable.$inferSelect
+
+export type InsertComment = typeof commentsTable.$inferInsert
+export type SelectComment = typeof commentsTable.$inferSelect
+
+export type InsertNotification = typeof notificationsTable.$inferInsert
+export type SelectNotification = typeof notificationsTable.$inferSelect
 
 // export type InsertPost = typeof postsTable.$inferInsert
 // export type SelectPost = typeof postsTable.$inferSelect

@@ -21,20 +21,20 @@ export default function LoginForm() {
       className="flex flex-grow pb-10 h-full flex-col gap-4 w-3/4 justify-center mx-auto"
       action={dispatch}
     >
-      <div>
+      {/* <div>
         <label className="text-sm text-stone-500" htmlFor="number">
           number
         </label>
         <input
-          className="block w-full rounded-xl py-3 px-2 focus:outline-none focus:border-none"
+          className="block disabled:bg-gray-300 disabled:dark:bg-stone-950 disabled:dark:outline-1 disabled:dark:outline disabled:dark:outline-stone-700 w-full rounded-xl py-3 px-2 focus:outline-none focus:border-none"
           type="text"
           id="number"
           name="number"
           disabled
         />
-      </div>
+      </div> */}
 
-      <div>
+      <div className='pt-10'>
         <label className="text-sm text-stone-500" htmlFor="email">
           mail
         </label>

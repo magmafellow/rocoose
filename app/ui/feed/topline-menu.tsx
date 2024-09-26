@@ -18,7 +18,7 @@ import ThemeSwitcher from '../theme-switcher'
 export default function ToplineMenu({ user }: { user: any }) {
   return (
     <div className="topline-menu-wrapper fixed w-screen h-screen top-0 -left-[105%] z-10">
-      <div className="topline-menu h-screen flex overflow-y-auto flex-col w-screen bg-wbgbase dark:bg-dbgbase text-wbase dark:text-dbase pt-24 pl-6">
+      <div className="topline-menu h-screen flex overflow-y-auto flex-col w-full bg-wbgbase dark:bg-dbgbase text-wbase dark:text-dbase pt-24 pl-6">
         <div className="flex gap-5 mb-10">
           <div className="w-16 h-16 overflow-hidden rounded-full">
             <img src={`/${user.profilePicture}`} alt="avatar" />
@@ -87,7 +87,7 @@ export default function ToplineMenu({ user }: { user: any }) {
           </div>
         </div>
         {user && (
-          <div className="absolute right-4 bottom-8">
+          <div className="absolute right-12 bottom-24">
             <Signout />
           </div>
         )}

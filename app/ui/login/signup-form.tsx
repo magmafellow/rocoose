@@ -11,10 +11,11 @@ export default function SignupForm() {
           number
         </label>
         <input
-          className="block w-full rounded-xl py-3 px-2 focus:outline-none focus:border-none"
+          className="block disabled:bg-gray-300 disabled:dark:bg-stone-950 disabled:dark:outline-1 disabled:dark:outline disabled:dark:outline-stone-700 w-full rounded-xl py-3 px-2 focus:outline-none focus:border-none"
           type="text"
           id="number"
           name="number"
+          disabled
         />
       </div>
 
@@ -23,7 +24,7 @@ export default function SignupForm() {
           mail
         </label>
         <input
-          className="block w-full rounded-xl py-3 px-2 focus:outline-none focus:border-none"
+          className="block bg-gray-100 dark:bg-dbgbase border border-gray-300 dark:border-stone-700 w-full rounded-xl py-3 px-2 focus:outline focus:outline-gray-400 focus:dark:outline-stone-700"
           type="email"
           id="email"
           name="email"
@@ -35,7 +36,7 @@ export default function SignupForm() {
           password
         </label>
         <input
-          className="block w-full rounded-xl py-3 px-2 focus:outline-none focus:border-none"
+          className="block bg-gray-100 dark:bg-dbgbase border border-gray-300 dark:border-stone-700 w-full rounded-xl py-3 px-2 focus:outline focus:outline-gray-400 focus:dark:outline-stone-700"
           type="password"
           id="password"
           name="password"

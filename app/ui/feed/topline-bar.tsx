@@ -12,7 +12,7 @@ export default function ToplineBar({ user }: { user: any }) {
         <h2 className="text-lg font-bold">Rocoose</h2>
       </div>
       <div className="flex gap-4">
-        <RiCopperCoinLine className="text-2xl" />
+        {/* <RiCopperCoinLine className="text-2xl" /> */}
         <NotificationsMenuOpen />
       </div>
 

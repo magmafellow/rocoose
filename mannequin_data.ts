@@ -1,4 +1,4 @@
-import { InsertUser } from './schema'
+import { InsertPost, InsertUser } from './schema'
 
 export const users: InsertUser[] = [
   {
@@ -20,6 +20,29 @@ export const users: InsertUser[] = [
     username: 'volga',
   },
 ]
+
+export const posts: InsertPost[] = [
+  {
+    id: '500',
+    ownerId: '1',
+    imageFile: 'post-500.jpg',
+    textContent: 'This day I met the beautiful tree.',
+  },
+  {
+    id: '501',
+    ownerId: '1',
+    imageFile: 'post-501.png',
+    textContent: 'React is strong as hard.',
+  },
+  {
+    id: '502',
+    ownerId: '2',
+    imageFile: 'post-502.png',
+    textContent: 'Next.js is amazing',
+  },
+]
+
+
 
 // export const posts: InsertPost[] = [
 //   {

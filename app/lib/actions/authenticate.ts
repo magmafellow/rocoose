@@ -50,7 +50,7 @@ export async function signupCredentials(prevState: any, formData: FormData) {
     const id = v4()
     const res = await registerCredentialsUser({ email, password, id, username })
 
-    return {success: 'account was registered'}
+    return {success: 'Account was registered. Stroll to login page'}
   } else {
     return {error: 'invalid input'}
   }

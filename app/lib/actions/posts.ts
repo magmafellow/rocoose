@@ -12,7 +12,7 @@ export async function getRandomLastPostsWithOwners(limit: number) {
     .select()
     .from(postsTable)
     .orderBy(postsTable.createdAt)
-    .limit(limit).fullJoin(usersTable, eq(postsTable.ownerId, usersTable.id))
+    .limit(limit).innerJoin(usersTable, eq(postsTable.ownerId, usersTable.id))
 
   return res
 }
